@@ -1,0 +1,1000 @@
+  923  git push heroku master
+  924  heroku pg:reset DATABASE
+  925  heroku run rake db:migrate
+  926  heroku run rake db:seed
+  927  heroku restar
+  928  heroku restart
+  929  cd code/sample_app
+  930  git checkout -b activation
+  931  rails g controller AccountActivations
+  932  rails g migration add_activation_to_users activation_digest:string activated:boolean activated_at:datetime
+  933  bundle exec rake db:migrate
+  934  bundle exec rake db:migrate:reset
+  935  bundle exec rake db:seed
+  936  rails g mailer UserMailer account_activation password_reset
+  937  rails s
+  938  cd code/sample_app
+  939  rails s development
+  940  rails s
+  941  bundle exec rake test:mailers
+  942  bundle exec rake test
+  943  git add .
+  944  git commit -m "Add account activations"
+  945  rails g controller PasswordReset new edit --no-test-framework
+  946  rails destroy controleer PasswordReset
+  947  rails destroy controller PasswordReset
+  948  rails g controller PaswordResets new edit --no-test-framework
+  949  rails destroy controller PaswordResets
+  950  rails generate controller PasswordResets new edit --no-test-framework
+  951  rails g migration add_reset_to_users reset_digest:string reset_sent_at:datetime
+  952  bundle exec rake db:migrate
+  953  bundle exec rake test
+  954  rails g integration_test password_resets
+  955  bundle exec rake test
+  956  rails s
+  957  cd code
+  958  cd sample_app
+  959  bundle exec rake routes
+  960  bundle exec rake test
+  961  heroku addons:add sendgrid:starter
+  962  git checkout -b micropost
+  963  git checkout activation
+  964  git add .
+  965  git commit -m "Finish with activations"
+  966  git checkout master
+  967  git merge activation
+  968  git push heroku master
+  969  heroku run rake db:migrate
+  970  git checkout micropost
+  971  git status
+  972  git checkout master
+  973  git status
+  974  git branches
+  975  git --help
+  976  git status
+  977  git branch list
+  978  git branch
+  979  git checkout micropost
+  980  rails g model Micropost content:text user:references
+  981  bundle exec rake db:migrate
+  982  bundle exec rake test:models
+  983  bundle exec rake test
+  984  git checkout master
+  985  git add .
+  986  git commit -m "Need to merge"
+  987  git checkout master
+  988  git merge micropost
+  989  git add .
+  990  git commit -m "Resolving conflicts"
+  991  git checkout micropost
+  992  git checkout master
+  993  git branch -D micropost
+  994  git checkout -b micropost
+  995  bundle exec rake test
+  996  rake db:migrate
+  997  bundle exec rake test
+  998  rails g controller Microposts
+  999  bundle exec rake db:migrate:reset
+ 1000  bundle exec rake db:migrate
+ 1001  bundle exec rake db:migrate --trace
+ 1002  bundle exec rake db:migrate
+ 1003  bundle exec rake db:migrate:reset
+ 1004  bundle exec rake db:seed
+ 1005  bundle exec rake db:seed --trace
+ 1006  rake db:migrate
+ 1007  bundle exec rake db:seed --trace
+ 1008  bundle exec rake db:migrate:reset
+ 1009  bundle exec rake db:seed
+ 1010  bundle exec rake db:seed --trace
+ 1011  cd code/sample_app
+ 1012  bundle exec rake db:seed
+ 1013  bundle exec rake db:migrate:reset
+ 1014  bundle exec rake db:seed
+ 1015  cd code
+ 1016  cd sample_app
+ 1017  bundle exec rake db:migrate:reset
+ 1018  bundle exec rake db:seed
+ 1019  rails s
+ 1020  cd code/sample_app
+ 1021  cd
+ 1022  cd code/insta2
+ 1023  rais s
+ 1024  rails s
+ 1025  cd code
+ 1026  rails new carrito --skip-bundle
+ 1027  bundle install
+ 1028  cd carrito
+ 1029  bundle install
+ 1030  rails g controller home index
+ 1031  rails s
+ 1032  rails g devise:install
+ 1033  rails g devise User
+ 1034  rake db:migrate
+ 1035  bundle install
+ 1036  rails s
+ 1037  rails g model Category name:string
+ 1038  rake db:migrate
+ 1039  rake db:seed
+ 1040  rails g model Product category:belongs_to title:string description:text price:decimal published_at:datetime  
+ 1041  rake db:seed
+ 1042  rake db:migrate
+ 1043  rake db:seed
+ 1044  irb
+ 1045  rails g controller admin/categories
+ 1046  cd code/sample_app
+ 1047  bundle exec rake db:migrate:reset
+ 1048  bundle exec rake db:seed
+ 1049  bundle exec rake db:migrate:reset
+ 1050  bundle exec rake db:seed
+ 1051  bundle exec rake db:migrate:reset
+ 1052  bundle exec rake db:seed
+ 1053  rails g integration_test users_profiles
+ 1054  bundle exec rake test
+ 1055  rails g integration_test microposts_interface
+ 1056  bundle exec rake test
+ 1057  rails s
+ 1058  cd code/sample_app
+ 1059  bundle install
+ 1060  rails g uploader Picture
+ 1061  rails g migration add_picture_to_microposts picture:string
+ 1062  bundle exec rake db:migrate
+ 1063  mount_uploader :picture, PictureUploader
+ 1064  rails -v
+ 1065  gem list --local rails
+ 1066  d
+ 1067  cd code
+ 1068  rails new dummy
+ 1069  cd dummy
+ 1070  rake doc:rails
+ 1071  cd ..
+ 1072  cd
+ 1073  cd code
+ 1074  rails new demo
+ 1075  cd demo
+ 1076  ls -p
+ 1077  rake about
+ 1078  rails server
+ 1079  rails g controller Say hello goobye
+ 1080  rails s
+ 1081  rake test
+ 1082  rake db:seed
+ 1083  rails s
+ 1084  rake db:seed
+ 1085  rake test
+ 1086  rake test:models
+ 1087  cd code/demo
+ 1088  rails s
+ 1089  cd /
+ 1090  cd
+ 1091  cd code
+ 1092  rails new depot
+ 1093  cd depot
+ 1094  rails g scaffold Product title:string description:text image_url:string price:decimal
+ 1095  rake db:migrate
+ 1096  rails s
+ 1097  cd code
+ 1098  ls
+ 1099  cd depot
+ 1100  rails g controller Store index
+ 1101  rake test
+ 1102  rails -v
+ 1103  rails about
+ 1104  rails hel
+ 1105  rails help
+ 1106  rails status
+ 1107  rake about
+ 1108  cd
+ 1109  cd code
+ 1110  rails _4.0.0_ new depot2
+ 1111  rails _4.0.0_
+ 1112  gem list --local
+ 1113  rails _4.0.0_ --version
+ 1114  cd depot
+ 1115  bundle install
+ 1116  rake test
+ 1117  bundle install
+ 1118  rake test
+ 1119  cd code/ruby
+ 1120  ruby arra0.rb
+ 1121  ruby array0.rb
+ 1122  ruby arraynew.rb
+ 1123  cd code
+ 1124  ls
+ 1125  cd carrito
+ 1126  rails s
+ 1127  rake routes
+ 1128  rails g controller articles
+ 1129  rails g model articles
+ 1130  rails destroy article
+ 1131  rails destroy artilces
+ 1132  rails destroy articles
+ 1133  rails destroy model articles
+ 1134  rails g controller product
+ 1135  rake route
+ 1136  rake routes
+ 1137  rails c
+ 1138  cd code/sample_app
+ 1139  rails s
+ 1140  cd
+ 1141  cd code
+ 1142  cd ruby
+ 1143  irb
+ 1144  cd code/ruby
+ 1145  ruby loop_the_loop.rb
+ 1146  ruby hashery_menu.rb
+ 1147  cd code/ruby
+ 1148  ruby strings_to_symbols.rb
+ 1149  ruby optinal_var.rb
+ 1150  ruby optional_var.rb
+ 1151  cd code/sample_app
+ 1152  ls app/controllers/*_controller.rb
+ 1153  git log
+ 1154  cd code
+ 1155  cd instagram
+ 1156  rail s
+ 1157  rails server
+ 1158  ls
+ 1159  cd 
+ 1160  cd code
+ 1161  ls
+ 1162  cd insta2
+ 1163  rails s
+ 1164  rake path
+ 1165  rake routes
+ 1166  rails s
+ 1167  rake routes
+ 1168  rails s
+ 1169  cd code
+ 1170  rails new simple_cms -d mysql
+ 1171  ls -la
+ 1172  cd simple_cms
+ 1173  ls -la
+ 1174  subl gemfile
+ 1175  subl Gemfile
+ 1176  bundle install
+ 1177  mysql --version
+ 1178  postgres --version
+ 1179  cd
+ 1180  mysql --version
+ 1181  rails -v
+ 1182  mysql -v
+ 1183  postgres -v
+ 1184  postgres -version
+ 1185  cd
+ 1186  cd code/simple_cms
+ 1187  rails s
+ 1188  sudo -u nixmaldonado psql simple_cms_development
+ 1189  sudo -u root psql simple_cms_development
+ 1190  sudo -u nix psql simple_cms_development
+ 1191  sudo -u postrgres psql
+ 1192  cd code
+ 1193  rails new simple_cms
+ 1194  bundle install
+ 1195  cd simpel_cms
+ 1196  cd simple_cms
+ 1197  bundle install
+ 1198  bundle update
+ 1199  bundle install
+ 1200  rails s
+ 1201  cd code/simple_cms
+ 1202  bundle install
+ 1203  cd cod
+ 1204  cd code
+ 1205  rails new simple_cms
+ 1206  rails s
+ 1207  cd simple_cms
+ 1208  rails s
+ 1209  rails g controller demo index
+ 1210  rails s
+ 1211  cd code/ruby
+ 1212  ruby minstrel.rb
+ 1213  irb
+ 1214  ruby ballad.rb
+ 1215  cd code/simple_cms
+ 1216  rails generate model Subject
+ 1217  rails generate model Page
+ 1218  rails generate model Section
+ 1219  rake db:migrate
+ 1220  rake db:migrate:status
+ 1221  rake db:migrate VERSION=0
+ 1222  rake db:migrate
+ 1223  cd code/photo-store
+ 1224  bundle install
+ 1225  rake db:migrate
+ 1226  rake db:seed
+ 1227  rails server
+ 1228  subl -o
+ 1229  subl help
+ 1230  subl
+ 1231  rake routes
+ 1232  rake routes -p admin
+ 1233  rake routes help
+ 1234  rake routes
+ 1235  rails g controller products
+ 1236  rails g migration AddFeatureAtToProducts featured_at:datetime
+ 1237  rake db:migrate
+ 1238  rails g migration AddPickedAtToProducts picked_at:datetime
+ 1239  rake db:migrate
+ 1240  cd code/photo-store
+ 1241  rails s
+ 1242  rails g migration AddAdminToUsers admin:boolean
+ 1243  rake db:migrate
+ 1244  User.create(
+ 1245  rails g model Comment user:belongs_to product:belongs_to message:text
+ 1246  rake db:migrate
+ 1247  rake routes
+ 1248  rails g controller Comments
+ 1249  cd code/photostore
+ 1250  cd code/photo-store
+ 1251  rails s
+ 1252  rails g model Review product:belongs_to user:belongs_to review:text
+ 1253  rails g Review controller
+ 1254  rails g controller Review
+ 1255  rails destroy controller Review
+ 1256  rails g controller Reviews
+ 1257  rake db:migrate
+ 1258  rake db:seed
+ 1259  cd
+ 1260  cd code
+ 1261  rails new Bloggy
+ 1262  cd bloggy
+ 1263  cd blogy
+ 1264  cd Bloggy
+ 1265  rails g controller articles
+ 1266  rake routes
+ 1267  cd code/Bloggy
+ 1268  rails s
+ 1269  cd code/Blogy
+ 1270  cd/code/Bloggy
+ 1271  cd code
+ 1272  cd Bloggy
+ 1273  cd code/Bloggy
+ 1274  rails s
+ 1275  rails g model Article title:string text:text
+ 1276  rake db:migrate
+ 1277  rails g controller welcome
+ 1278  rake routes
+ 1279  cd code
+ 1280  cd photo-store
+ 1281  rails s
+ 1282  cd code/photo store
+ 1283  cd code
+ 1284  cd photo-store
+ 1285  rails g controller admin/users
+ 1286  rails g migration AddReviewerToUsers reviewer:boolean
+ 1287  rake db:migrate
+ 1288  rake routes
+ 1289  rake routes 
+ 1290  rake routes | grep reviewer
+ 1291  cd code/Bloggy
+ 1292  rails s
+ 1293  cd code/Bloggy
+ 1294  rails g model Comment commenter:string body:text article:references
+ 1295  rake db:migrate
+ 1296  rails g controller Comments
+ 1297  cd code/Bloggy
+ 1298  rails s
+ 1299  cd code/Bloggy
+ 1300  rails s
+ 1301  rake doc:guides
+ 1302  bundle install
+ 1303  rake doc:guides
+ 1304  cd code/photo-store
+ 1305  rails s
+ 1306  git config --global color.ui true
+ 1307  git st
+ 1308  git status
+ 1309  git help
+ 1310  cd code
+ 1311  cd insta2
+ 1312  cd
+ 1313  cd code/photo-store
+ 1314  rail.s s
+ 1315  rails s
+ 1316  bundle install
+ 1317  cd code/photo-strore
+ 1318  cd code/photo-store
+ 1319  bundle install
+ 1320  cd app/assests/stylesheet
+ 1321  cd app/assests/
+ 1322  cd app/assest
+ 1323  cd app/assets/
+ 1324  cd stylesheet
+ 1325  cd stylesheets
+ 1326  bitters install
+ 1327  rails s
+ 1328  cd
+ 1329  cd code/photo-store
+ 1330  rails g refills:import centered-navigation --coffee
+ 1331  rails s
+ 1332  rails g refills:import hover-tile-animation --coffee
+ 1333  rails destroy refills:import hover-tile-animation --coffee
+ 1334  rails g refills:import grid-items --coffee
+ 1335  rails s
+ 1336  rails g refills:import footer --coffee
+ 1337  rails s
+ 1338  rails g refills:import comments --coffee
+ 1339  rails g refills:import comment --coffee
+ 1340  rails s
+ 1341  rails g refills:import hero --coffee
+ 1342  rails destroy refills:import hero --coffee
+ 1343  cd code
+ 1344  cd photo-store
+ 1345  rails s
+ 1346  cd code/photo-store
+ 1347  rails s
+ 1348  sublime update
+ 1349  rails cd code
+ 1350  cd code
+ 1351  rails new link-share
+ 1352  bundle install
+ 1353  cd link-share
+ 1354  bundle install
+ 1355  rails g devise:install
+ 1356  rails g devise User
+ 1357  rake db:migrate
+ 1358  rails s
+ 1359  rails ws
+ 1360  rails s
+ 1361  rake db:migrate
+ 1362  rails g controller urls
+ 1363  rails g model urls
+ 1364  rails s
+ 1365  rake db:migration
+ 1366  rake db:migrations
+ 1367  rake db:migrate
+ 1368  rails s
+ 1369  rm db/development.sqlite3 
+ 1370  rake db:migrate
+ 1371  rails s
+ 1372  bundle install
+ 1373  rails s
+ 1374  rails g controller User
+ 1375  rails destroy controller Users
+ 1376  rails g controller Users
+ 1377  rails g controller welcome
+ 1378  rails destroy model urls
+ 1379  rails g model links users:belongs_to link:string
+ 1380  rake db:migrate
+ 1381  rails destroy controller urls
+ 1382  rake db:migrate
+ 1383  rails g controller links
+ 1384  rake db:migrate
+ 1385  subl --help
+ 1386  cd code
+ 1387  cd photo-store
+ 1388  subl
+ 1389  .subl
+ 1390  . subl
+ 1391  cd code/photo-store
+ 1392  subl .
+ 1393  cd code
+ 1394  ls
+ 1395  cd depot
+ 1396  subl .
+ 1397  ls -p
+ 1398  ls
+ 1399  cd depot
+ 1400  cd code/depot
+ 1401  ls
+ 1402  rake db:migrate
+ 1403  rails server
+ 1404  rake test
+ 1405  rake db:rollback
+ 1406  rake test
+ 1407  rake db:migrate
+ 1408  rails s
+ 1409  rake db:seed
+ 1410  rails server
+ 1411  rake test
+ 1412  git init
+ 1413  git add .
+ 1414  git commit -m "Depot Scaffold"
+ 1415  git checkout
+ 1416  git help
+ 1417  git diff
+ 1418  cd code
+ 1419  cd depot
+ 1420  git undo
+ 1421  git help
+ 1422  git bundle
+ 1423  git unbundle seed.rb
+ 1424  git help
+ 1425  git reste
+ 1426  git reset
+ 1427  git help
+ 1428  git chekcout .
+ 1429  git checkout .
+ 1430  rake test
+ 1431  git add.
+ 1432  git add .
+ 1433  git status
+ 1434  git commit -m "Validations!"
+ 1435  subl .
+ 1436  rake test:controllers
+ 1437  git add .
+ 1438  git status
+ 1439  git commit
+ 1440  git commit -m "update controller test"
+ 1441  git checkout
+ 1442  rails s
+ 1443  rails generate scaffold Cart
+ 1444  bundle exec
+ 1445  bundle update
+ 1446  git status
+ 1447  git add /
+ 1448  git add .
+ 1449  git commit -m "Testing Cache"
+ 1450  rails g scaffold Cart
+ 1451  rake db:migrate
+ 1452  git status
+ 1453  git add .
+ 1454  git status
+ 1455  git commit -m "add Cart"
+ 1456  git status
+ 1457  git add .
+ 1458  git status
+ 1459  rails g scaffold LineItem product:references cart:belongs_to
+ 1460  rake test
+ 1461  rake db:migrate
+ 1462  rake test
+ 1463  rake test test/controllers
+ 1464  rake test test/controllers/line_items_controller_test.rb
+ 1465  rails s
+ 1466  rails -v
+ 1467  rake test
+ 1468  cd code
+ 1469  rails new linkshare2
+ 1470  cd linkshare2
+ 1471  subl .
+ 1472  bundle install
+ 1473  rails g devise:install
+ 1474  rails g devise User
+ 1475  rake db:migrate
+ 1476  rails g controller home index
+ 1477  rake routes
+ 1478  rails s
+ 1479  rake routes
+ 1480  rails s
+ 1481  cd
+ 1482  cd code/instagram
+ 1483  subl /
+ 1484  rails s
+ 1485  cd ..
+ 1486  cd insta2
+ 1487  rails s
+ 1488  subl /
+ 1489  cd ..cd .. 
+ 1490  cd ..
+ 1491  cd linkshare2
+ 1492  rail s 
+ 1493  rails s
+ 1494  cd ..
+ 1495  cd linkshare
+ 1496  cd ls
+ 1497  ls
+ 1498  cd link-share
+ 1499  subl .
+ 1500  cd ..
+ 1501  cd linkshare2
+ 1502  rails g controller links belong_to:user string:url
+ 1503  rake db migrate
+ 1504  rake db:migrate
+ 1505  rails g model links users:belongs_to url:string
+ 1506  rails destroy controller links
+ 1507  rails g model links users:belongs_to url:string
+ 1508  rails g model links belongs_to:users url:string
+ 1509  rake db:migrate
+ 1510  rails g controller links
+ 1511  rake db:migrate
+ 1512  rails destroy model links
+ 1513  rails g model links user:belongs_ti url:string
+ 1514  rails destroy model links
+ 1515  rails g model links user:belongs_to url:string
+ 1516  rake db:migrate
+ 1517  cd ..
+ 1518  cd link-share
+ 1519  subl .
+ 1520  cd ..
+ 1521  cd linkshare2
+ 1522  subl .
+ 1523  cd
+ 1524  cd downloads/linkshare
+ 1525  cd download
+ 1526  cd Downloads/linkshare
+ 1527  cd Downloads
+ 1528  cd linkshare
+ 1529  cd LinkShare
+ 1530  subl .
+ 1531  cd code/linkshare2
+ 1532  cd code
+ 1533  cd ..
+ 1534  cd
+ 1535  cd code/linkshare2
+ 1536  rails s
+ 1537  cd
+ 1538  cd Downloads/LinkShare
+ 1539  subl .
+ 1540  cd
+ 1541  cd code/linkshare2
+ 1542  rake db:migrate
+ 1543  rails s
+ 1544  rake routes
+ 1545  rails s
+ 1546  rake routes
+ 1547  rails s
+ 1548  git help
+ 1549  cd code
+ 1550  mk dir claseGit
+ 1551  mk:dir claseGit
+ 1552  mkdir claseGit
+ 1553  cd claseGit
+ 1554  git clone git@github.com:jmax/PhotoStore2.git
+ 1555  bundle install
+ 1556  subl .
+ 1557  cd PhotoStore2
+ 1558  cd
+ 1559  cd 
+ 1560  cd code/linkshare
+ 1561  cd ls
+ 1562  ls
+ 1563  cd code
+ 1564  cd linkshare
+ 1565  ls
+ 1566  cd link-share
+ 1567  rails s
+ 1568  cd ..
+ 1569  ls
+ 1570  cd linkshare2
+ 1571  rails s
+ 1572  subl .
+ 1573  rails s
+ 1574  ruby -v
+ 1575  rvm
+ 1576  bundle installl
+ 1577  bundle install
+ 1578  rails s '
+ 1579  rails s 
+ 1580  cd ..
+ 1581  cd
+ 1582  cd code
+ 1583  ls
+ 1584  cd claseGit
+ 1585  cd PhotoStore2
+ 1586  bundle install
+ 1587  subl .
+ 1588  ruby -v
+ 1589  bundle install
+ 1590  rails s
+ 1591  git status
+ 1592  git commit .
+ 1593  git add .
+ 1594  git commit -m"initilize project"
+ 1595  git push
+ 1596  rails s
+ 1597  hola ura
+ 1598  ura
+ 1599  cd code/claseGit/PhotoStore2
+ 1600  rake db:migrate
+ 1601  rake db:populate
+ 1602  rails s
+ 1603  rake rails:update:bin
+ 1604  rails s
+ 1605  rails g model Favorite user:belongs_to photo:belongs_to
+ 1606  rails s
+ 1607  rake db:migrate
+ 1608  rails s
+ 1609  rails g controller favorites
+ 1610  rake routes
+ 1611  rails s
+ 1612  rake db:migrate
+ 1613  cd
+ 1614  cd code/insta2
+ 1615  subl .
+ 1616  cd
+ 1617  cd code/calseGit/PhotoStore2
+ 1618  cd code/claseGit/PhotoStore2
+ 1619  rails s
+ 1620  rake routes
+ 1621  subl .
+ 1622  bundle open devise
+ 1623  $EDITOR
+ 1624  $EDITOR subl
+ 1625  export EDITOR=subl
+ 1626  bundle open devise
+ 1627  cd 
+ 1628  cd code/depo
+ 1629  cd code/depot
+ 1630  rake test
+ 1631  cd code/calseGit/PhotoStore2
+ 1632  cd code/claseGit/PhotoStore2
+ 1633  rails s
+ 1634  cd code
+ 1635  cd claseGit
+ 1636  cd PhotoStore2
+ 1637  subl .
+ 1638  rails s
+ 1639  subl .
+ 1640  rails s
+ 1641  cd
+ 1642  cd code
+ 1643  ls
+ 1644  cd claseGit
+ 1645  cd PhotoStore2
+ 1646  rake routes
+ 1647  rails c
+ 1648  rails g controller liking
+ 1649  rails g model Like user:belongs_to photo:belongs_to
+ 1650  rails s
+ 1651  rake db:migrate
+ 1652  rails s
+ 1653  rails destroy controller Linking
+ 1654  rails destroy controller asdfas
+ 1655  rails destroy controller Liking
+ 1656  rails destroy controller Likes
+ 1657  rails g controller likes
+ 1658  rails s
+ 1659  cd
+ 1660  cd code
+ 1661  ls
+ 1662  cd linkshare2
+ 1663  subl .
+ 1664  rails s
+ 1665  cd
+ 1666  cd code/claseGit/PhotoStore2/
+ 1667  rails s
+ 1668  subl .
+ 1669  rails s
+ 1670  cd code
+ 1671  cd claseGit
+ 1672  PhotoStore2
+ 1673  cd PhotoStore2/
+ 1674  rails s
+ 1675  cd code
+ 1676  cd claseGit
+ 1677  ls
+ 1678  cd PhotoStore2/
+ 1679  rake
+ 1680  subl .
+ 1681  cd code
+ 1682  cd koans
+ 1683  subl .
+ 1684  ruby -v
+ 1685  rake gen
+ 1686  rake
+ 1687  rvm
+ 1688  ruby c
+ 1689  irb
+ 1690  rake
+ 1691  irv
+ 1692  irb
+ 1693  cd code
+ 1694  cd koans
+ 1695  subl .
+ 1696  irb
+ 1697  rake
+ 1698  irb
+ 1699  rake
+ 1700  irb
+ 1701  rake
+ 1702  irb
+ 1703  rake
+ 1704  irb
+ 1705  rake
+ 1706  irb
+ 1707  rake
+ 1708  irb
+ 1709  rake
+ 1710  [6~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1711  pl;;;;;;;;;;;;;;;;;;;;;;po0                                    assssssss12222222222222233333333333333333333333333333333333333333333333333333333333333333336
+ 1712  qq```````````````````````||||||||||||2.23606797749979p;[[[[[[[[[[~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~455555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+ 1713  rake
+ 1714  exit
+ 1715  cd code/koans
+ 1716  rake
+ 1717  rake --trace
+ 1718  rake
+ 1719  rake --trace
+ 1720  rake 
+ 1721  irb
+ 1722  rake
+ 1723  irb
+ 1724  rake
+ 1725  irb
+ 1726  rake
+ 1727  irb
+ 1728  rake
+ 1729  irbf
+ 1730  irb
+ 1731  rake
+ 1732  irb
+ 1733  cd code/koan
+ 1734  cd code/koans/
+ 1735  subl.
+ 1736  subl .
+ 1737  rake
+ 1738  clar
+ 1739  clear
+ 1740  rake
+ 1741  clear
+ 1742  rake
+ 1743  clear
+ 1744  rale
+ 1745  rake
+ 1746  clear
+ 1747  rake
+ 1748  clear
+ 1749  rake
+ 1750  clear
+ 1751  rake
+ 1752  clear
+ 1753  rake
+ 1754  clear
+ 1755  rake
+ 1756  clear
+ 1757  rake
+ 1758  clear
+ 1759  rake
+ 1760  clear
+ 1761  rake
+ 1762  clear
+ 1763  rake
+ 1764  ruby test
+ 1765  ruby test.rb
+ 1766  rake
+ 1767  ruby test.rb
+ 1768  rake
+ 1769  ruby test.rb
+ 1770  rake
+ 1771  clar
+ 1772  clear
+ 1773  rake
+ 1774  clear
+ 1775  rale
+ 1776  rake
+ 1777  cd code/koans
+ 1778  subl .
+ 1779  rake
+ 1780  clear
+ 1781  rake
+ 1782  clear
+ 1783  rake
+ 1784  CLEAR
+ 1785  clear
+ 1786  rake
+ 1787  clear
+ 1788  rake
+ 1789  clear
+ 1790  rake
+ 1791  ruby test.rb
+ 1792  ruby calc.rb
+ 1793  irb
+ 1794  clear
+ 1795  irb
+ 1796  cd code
+ 1797  ls
+ 1798  cd claseGit/
+ 1799  cd PhotoStore2/
+ 1800  subli .
+ 1801  subl .
+ 1802  cd
+ 1803  cd code/koans
+ 1804  ruby calc.rb
+ 1805  ruby -v
+ 1806  ruby calc.rb
+ 1807  irb
+ 1808  calc.rb
+ 1809  ruby calc.rb
+ 1810  rake
+ 1811  clear
+ 1812  rake
+ 1813  clear
+ 1814  CLEAR
+ 1815  rake
+ 1816  clear
+ 1817  cd code
+ 1818  cd ls
+ 1819  cd claseGit/
+ 1820  cd PhotoStore2/
+ 1821  subl .
+ 1822  rails s
+ 1823  push heroku master
+ 1824  heroku-belt
+ 1825  heroku
+ 1826  heroku status
+ 1827  heroku
+ 1828  toolbelt
+ 1829  heroku toolbelt
+ 1830  heroku help
+ 1831  heroku certs
+ 1832  heroku
+ 1833  git push heroku master
+ 1834  rails c
+ 1835  rail c
+ 1836  rails help
+ 1837  rails console
+ 1838  cd
+ 1839  cd code
+ 1840  rails new
+ 1841  rails new primer_blog --skip-bundle
+ 1842  subl .
+ 1843  bundle insta --without production
+ 1844  bundle install --without production
+ 1845  cd primer_blog
+ 1846  bundle install --without production
+ 1847  subl .
+ 1848  bundle install --without production
+ 1849  heroku login
+ 1850  rails g scaffold Article title body:text published_at:datetime
+ 1851  rake db:migrate
+ 1852  git push heroku master
+ 1853  git init
+ 1854  git push heroku master
+ 1855  git add .
+ 1856  git commit -m"inicial"
+ 1857  heroku create Blog_Nix
+ 1858  nixs_blog
+ 1859  heroku create nix_blog
+ 1860  heroku create nix
+ 1861  heroku create nixblog
+ 1862  git push heroku master
+ 1863  bundle check
+ 1864  git add .
+ 1865  git commit -m"actual gemfile"
+ 1866  git push heroku master
+ 1867  heroku run rake db:migrate
+ 1868  heroku restart
+ 1869  heroku status
+ 1870  cd code
+ 1871  cd koans
+ 1872  rake
+ 1873  cd code
+ 1874  cd claseGit/
+ 1875  cd PhotoStore2/
+ 1876  subl .
+ 1877  cd code
+ 1878  rails new penultimun
+ 1879  cd penultimun/
+ 1880  subl .
+ 1881  bundle install
+ 1882  rails g controller home index
+ 1883  rails g devise:install
+ 1884  rake acts_as_taggable_on_engine:install:migrations
+ 1885  rails g devise Admin
+ 1886  rails g devise User
+ 1887  rails g devise:views users
+ 1888  rails g devise:views admins
+ 1889  rake db:migrate
+ 1890  bundle open devise
+ 1891  clear
+ 1892  rails g model Post user:belongs_to title body:text
+ 1893  rails g model Comment user:belongs_to post:belongs_to body:text
+ 1894  rake db:migrate
+ 1895  rails g controller posts
+ 1896  rails s
+ 1897  rake db:migrate
+ 1898  rails s
+ 1899  bundle install
+ 1900  rails s
+ 1901  bundle install
+ 1902  rails s
+ 1903  subl .
+ 1904  rails s
+ 1905  cd code/penultimun
+ 1906  subl .
+ 1907  cd
+ 1908  cd code
+ 1909  cd hashdog
+ 1910  subl .
+ 1911  cd ..
+ 1912  ls
+ 1913  cd primer_blog
+ 1914  subl .
+ 1915  cd ..
+ 1916  cd hashdog
+ 1917  bundle install
+ 1918  git init
+ 1919* 
+ 1920  bundle install
+ 1921  git commit -m "Inicializando"
+ 1922  history >> history
